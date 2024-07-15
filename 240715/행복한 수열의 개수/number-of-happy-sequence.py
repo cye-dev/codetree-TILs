@@ -14,11 +14,12 @@ for row in range(n):
     for col in range(n):
         if num == arr[row][col]:
             cnt += 1
+            if cnt >= m:
+                ans += 1
+                break
         else:
             num = arr[row][col]
-    
-    if cnt >= m:
-        ans += 1
+            cnt = 1
 
 for col in range(n):
     num = 0
@@ -27,11 +28,11 @@ for col in range(n):
     for row in range(n):
         if num == arr[row][col]:
             cnt += 1
+            if cnt >= m:
+                ans += 1
+                break
         else:
             num = arr[row][col]
             cnt = 1
-    
-    if cnt >= m:
-        ans += 1
 
 print(ans)
