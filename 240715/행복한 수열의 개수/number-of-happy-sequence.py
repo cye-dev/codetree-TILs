@@ -29,6 +29,7 @@ for col in range(n):
             cnt += 1
         else:
             num = arr[row][col]
+            cnt = 1
     
     if cnt >= m:
         ans += 1
